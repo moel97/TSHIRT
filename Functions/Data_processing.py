@@ -150,3 +150,10 @@ def date_cleaning(xp_path):
         plotting(sens1_df, sens2_df, dss)
     except:
        messagebox.showinfo("ERROR", "Falsche Dateneingabe")
+
+
+
+#inables the running of the whole module as a parallel process
+def date_cleaning_paralell(xp_path):
+    Proc =multiprocessing.Process(target=date_cleaning,args= [xp_path])
+    Proc.start()

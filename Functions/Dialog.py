@@ -73,10 +73,10 @@ def Dialog():
                                                                                                 pady=10, padx=10,
                                                                                                 sticky="nsew")
     Patton_start = Button(page1, text='START Program', font=(25),
-                          command=lambda: Read_data(e.get() + "/" + e2.get(), value_inside.get(),
+                          command=lambda: read_data_paralell(e.get() + "/" + e2.get(), value_inside.get(),
                                                     value_inside2.get())).grid(row=4, column=0, pady=10, padx=10,
                                                                                sticky="nsew")
-    End_label = Label(page1, text='Drücken Sie lange die Taste "q", um das Programm zur Bewegungserfassung zu stoppen.',
+    End_label = Label(page1, text='Drücken Sie lange die Taste "Esc", um das Programm zur Bewegungserfassung zu stoppen.',
                       font=(25), borderwidth=5, bg='#333b3d', fg="white").grid(row=4, column=1, pady=10, padx=10,
                                                                                sticky="nsew")
     page1.columnconfigure(0, weight=1)
@@ -96,7 +96,7 @@ def Dialog():
         e2_p2.delete(0, END)
         e2_p2.insert(0, path2)
 
-    Patton_start2 = Button(page2, text='Graphen erstellen', font=(25), command=lambda: date_cleaning(e2_p2.get())).grid(
+    Patton_start2 = Button(page2, text='Graphen erstellen', font=(25), command=lambda: date_cleaning_paralell(e2_p2.get())).grid(
         row=1, column=0, pady=10, padx=10, sticky="nsew")
 
     page2.columnconfigure(0, weight=1)

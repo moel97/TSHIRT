@@ -9,3 +9,5 @@ import tkinter as tk
 from PIL import Image, ImageTk
 from tkinter import messagebox
 import keyboard
+import concurrent.futures
+import multiprocessing

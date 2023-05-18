@@ -5,4 +5,6 @@ from Functions.Dialog import *
 
 ######      MAIN
 
-Dialog()
+
+if __name__ == '__main__':
+    Dialog()
